@@ -1,0 +1,23 @@
+PROYECTO API CUENTA
+
+Crearemos una api de una cuenta bancaria
+Para este proyecto vamos a interactuar con una base de datos real y haremos uso del hateoas.
+
+1. CREACION DEL PROYECTO
+Creaos nuestro proyecto y añadimos las siguientes dependencias: hateoas, spring data, mysql, web y devtools. Luego haremos la conexion a nuestra base de datos desde el archivo .properties.
+
+2. CREACION DE LOS REPOSITORIOS
+Primero creamos nuestra clase entity, posteriormente creamos nuestro repository
+
+3. CREACION DE CONTROLLER
+En el repository extendemos JpaRepository. Luego creamos nuestro service CuentaService.
+En CuentaService inyectamos el repository CuentaRepository, despues de tener el repository en nuestro service procedemos a crear los metodos para hacer los crud.
+
+Posteriormente creamos nuestra cuenta controller, y a este le inyectamos nuestro service CuentaService y procedemos a realizar los metodos http.
+En nuestra entity Cuenta extendemos de RepresentationModel<Cuenta> y entre los <> va el nombre de nuestra entity, para que esta herede los metodos de Spring Hateoas
+
+Notas:
+ResponseEntity: Indica que lo que va a retornar es un entity.
+
+4.Implementacion de Spring HATEOAS
+NOTA: Esta parte decidi que solo fuera teorica, no implementa nada porque en un junior no es indispensable y preferi no complicarme la vida
